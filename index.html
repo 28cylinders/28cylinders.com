@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>28 Cylinders: Creative Studio Miami</title>
+<meta name="description" content="28 Cylinders is a Miami-based creative studio specializing in branding, graphic design, art direction, and paid advertising. Founded by Sofia Mondelo. Bilingual.">
+<meta name="keywords" content="branding studio Miami, graphic design Miami, art direction, visual identity, paid ads, creative agency Miami, Sofia Mondelo">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="28 Cylinders: Creative Studio Miami">
+<meta property="og:description" content="A creative engine powering your ideas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://28cylinders.com">
+<meta property="og:image" content="https://28cylinders.com/images/brand/logo-02.png">
+<link rel="canonical" href="https://28cylinders.com">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HERO ── */
+.hero{
+  min-height:100vh;background:var(--black);
+  display:grid;grid-template-columns:1fr 1fr;
+  position:relative;overflow:hidden;
+}
+.hero-blob-1{width:400px;height:400px;background:var(--lavender);opacity:.06;top:-60px;right:40%;animation:blobFloat 9s ease-in-out infinite alternate}
+.hero-blob-2{width:240px;height:240px;background:var(--mint);opacity:.07;bottom:80px;left:35%;animation:blobFloat 12s ease-in-out 1s infinite alternate-reverse}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 52px;position:relative;z-index:2;
+}
+.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.35;margin-bottom:24px;animation:fadeUp .6s ease .1s both}
+.hero-headline{font-size:clamp(32px,3.8vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:24px;animation:fadeUp .7s ease .2s both}
+.hero-headline em{font-style:italic;font-weight:300}
+.hero-body{font-size:16px;font-weight:300;line-height:1.75;opacity:.75;max-width:380px;margin-bottom:36px;animation:fadeUp .7s ease .35s both}
+.hero-ctas{display:flex;gap:16px;align-items:center;flex-wrap:wrap;animation:fadeUp .7s ease .5s both}
+.hero-sticker{position:absolute;z-index:3;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;color:var(--black);pointer-events:none}
+.hero-right{position:relative;overflow:hidden;z-index:2;padding:40px 20px 40px 0}
+.hero-engine{width:100%;height:100%;min-height:calc(100vh - var(--nav-h) - 28px);object-fit:contain;display:block}
+.hero-engine:hover{animation:heroWiggle .8s ease-in-out infinite}
+@keyframes heroWiggle{
+  0%{transform:translateX(0) rotate(0deg)}
+  20%{transform:translateX(-14px) rotate(-5deg)}
+  45%{transform:translateX(10px) rotate(3deg)}
+  65%{transform:translateX(-8px) rotate(-3deg)}
+  85%{transform:translateX(6px) rotate(2deg)}
+  100%{transform:translateX(0) rotate(0deg)}
+}
+
+/* ── SERVICES ── */
+.services{background:var(--white);color:var(--black);padding:100px 48px;position:relative;overflow:hidden}
+.services-blob{position:absolute;width:480px;height:480px;border-radius:40% 60% 55% 45%/45% 55% 65% 35%;background:var(--teal);opacity:.04;top:-120px;right:-100px;pointer-events:none}
+.services-inner{max-width:1100px;margin:0 auto;position:relative}
+.services-header{margin-bottom:48px}
+.services-heading{font-size:clamp(30px,4vw,50px);font-weight:600;letter-spacing:-.02em;text-transform:uppercase;line-height:1;color:var(--black)}
+.services-heading em{font-style:italic;font-weight:300}
+.svc-tag{display:inline-block;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 13px;color:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.svc-card{padding:32px 28px;border:1px solid rgba(0,0,0,.07);transition:background .2s}
+.svc-card:hover{background:rgba(0,0,0,.03)}
+.svc-card-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.svc-card-name{font-size:18px;font-weight:600;color:var(--black)}
+.svc-card-items{list-style:none;display:flex;flex-direction:column;gap:7px}
+.svc-card-items li{font-size:13px;font-weight:300;color:rgba(0,0,0,.55);padding-left:12px;border-left:2px solid rgba(0,0,0,.1);line-height:1.4}
+
+/* ── PROJECTS ── */
+.projects{background:var(--black);color:var(--white);padding:100px 48px;position:relative;overflow:hidden}
+.projects-blob{position:absolute;width:560px;height:560px;border-radius:55% 45% 40% 60%/60% 40% 55% 45%;background:var(--sky);opacity:.04;bottom:-140px;left:-80px;pointer-events:none}
+.projects-inner{max-width:1100px;margin:0 auto;position:relative}
+.projects-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px}
+.projects-title{font-size:clamp(30px,4vw,50px);font-weight:600;letter-spacing:-.02em;text-transform:uppercase;line-height:1}
+.projects-title em{font-style:italic;font-weight:300}
+.view-all-link{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);text-decoration:none;opacity:.45;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:2px;transition:opacity .2s}
+.view-all-link:hover{opacity:1}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.project-card{position:relative;overflow:hidden;cursor:pointer;background:#111;border:none;outline:none;border-radius:20px;padding:0;text-align:left;display:block;width:100%;aspect-ratio:16/9}
+.project-card:nth-child(1){grid-column:span 2}
+.project-card:not(:first-child){aspect-ratio:4/3}
+.project-img-ph{position:absolute;inset:0;width:100%;height:100%}
+.project-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.project-card:hover .project-img{transform:scale(1.04)}
+a[href="work.html#coco"] .project-img{object-position:top center}
+.project-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 28px;opacity:0;transition:opacity .3s}
+.project-card:hover .project-overlay{opacity:1}
+.project-meta{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);opacity:.6;margin-bottom:5px}
+.project-name{font-size:18px;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:var(--white)}
+.project-badge{position:absolute;top:16px;left:16px;z-index:2;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 13px;color:var(--black)}
+
+/* ── ABOUT ── */
+.about{background:var(--white);color:var(--black);padding:100px 48px;position:relative;overflow:hidden}
+.about-blob{position:absolute;width:420px;height:420px;border-radius:65% 35% 50% 50%/40% 60% 50% 60%;background:var(--purple);opacity:.04;top:-80px;left:-80px;pointer-events:none}
+.about-inner{max-width:1100px;margin:0 auto;position:relative}
+.about-top{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:72px}
+.about-statement{font-size:clamp(24px,2.8vw,38px);font-weight:600;line-height:1.15;letter-spacing:-.02em;text-transform:uppercase;color:var(--black)}
+.about-statement em{font-style:italic;font-weight:300;text-transform:none}
+.about-copy p{font-size:16px;font-weight:300;line-height:1.8;color:var(--black);opacity:.75;margin-bottom:18px}
+.about-copy p:last-child{margin-bottom:0}
+.about-copy strong{font-weight:600;color:var(--black);opacity:1}
+.about-img-row{display:grid;grid-template-columns:2fr 1fr;gap:3px;margin-bottom:72px}
+.about-img-ph{background:#efefef;border:1.5px dashed rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:rgba(0,0,0,.22);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.about-img-ph svg{opacity:.2}
+.about-img-wide{aspect-ratio:16/7}
+.about-img-tall{aspect-ratio:3/4}
+.about-img-photo{width:100%;height:100%;object-fit:cover;display:block}
+.about-bubbles{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-top:52px;border-top:1px solid rgba(0,0,0,.07)}
+.bubble{border:1.5px solid rgba(0,0,0,.08);border-radius:20px;padding:26px 30px;position:relative;overflow:hidden}
+.bubble:first-child{transform:rotate(-.6deg)}
+.bubble:last-child{transform:rotate(.5deg)}
+.bubble-label{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--black);opacity:.3;margin-bottom:10px}
+.bubble-num{font-size:48px;font-weight:600;letter-spacing:-.04em;line-height:1;margin-bottom:10px}
+.bubble p{font-size:14px;font-weight:300;line-height:1.65;color:var(--black);opacity:.6}
+
+/* ── CONTACT ── */
+.contact{background:var(--black);color:var(--white);padding:100px 48px;position:relative;overflow:hidden}
+.contact-blob{position:absolute;width:480px;height:480px;border-radius:50% 50% 40% 60%/55% 45% 60% 40%;background:var(--pink);opacity:.05;top:-100px;right:-80px;pointer-events:none}
+.contact-inner{max-width:1100px;margin:0 auto;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-left h2{font-size:clamp(38px,5vw,66px);font-weight:600;line-height:.95;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:26px;color:var(--white)}
+.contact-left h2 em{font-style:italic;font-weight:300}
+.contact-left p{font-size:16px;font-weight:300;line-height:1.75;color:var(--white);opacity:.65;margin-bottom:32px;max-width:360px}
+.contact-email-link{display:inline-block;font-size:17px;font-weight:600;color:var(--white);text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.3);padding-bottom:4px;transition:color .2s,border-color .2s}
+.contact-email-link:hover{color:var(--mint);border-color:var(--mint)}
+.contact-lang{display:flex;gap:10px;margin-top:26px}
+.lang-pill{border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border:1px solid rgba(255,255,255,.2);color:var(--white)}
+.contact-services{padding-top:6px;display:flex;flex-direction:column;gap:14px}
+.contact-svc-line{display:flex;align-items:center;gap:14px;font-size:15px;font-weight:400;text-transform:uppercase;letter-spacing:.06em;color:var(--white)}
+.csl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:calc(var(--nav-h) + 28px)}
+  .hero-right{order:-1;height:52vw;min-height:200px;padding:16px 16px 0}
+  .hero-engine{min-height:unset;height:100%}
+  .hero-img-ph{min-height:200px;height:100%;aspect-ratio:unset}
+  .hero-left{padding:40px 24px 60px}
+  .hero-sticker{display:none}
+
+  .services,.projects,.about,.contact{padding:64px 24px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+
+  .projects-grid{grid-template-columns:1fr}
+  .project-card:nth-child(1){grid-column:span 1}
+  .project-img{aspect-ratio:16/9!important}
+
+  .about-top{grid-template-columns:1fr;gap:32px}
+  .about-img-row{grid-template-columns:1fr}
+  .about-img-tall{display:none}
+  .about-bubbles{grid-template-columns:1fr}
+  .bubble:first-child,.bubble:last-child{transform:none}
+
+  .contact-inner{grid-template-columns:1fr;gap:44px}
+}
+@media(max-width:480px){
+  .hero-headline{font-size:clamp(28px,8vw,42px)}
+  .projects-header{flex-direction:column;align-items:flex-start;gap:12px}
+  .services-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body class="page-offset">
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="#" aria-label="28 Cylinders Home">
+    <img src="images/brand/logo.png" alt="28 Cylinders" height="18">
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#services">Services</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="#about">Studio</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="mailto:hi@28cylinders.com" class="nav-cta">Let's Work</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="drawer" role="dialog" aria-label="Mobile menu">
+  <a href="#services" class="drawer-link">Services</a>
+  <a href="work.html" class="drawer-link">Work</a>
+  <a href="#about" class="drawer-link">Studio</a>
+  <a href="#contact" class="drawer-link">Contact</a>
+  <a href="mailto:hi@28cylinders.com" class="drawer-cta">Let's Work</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Graphic Design</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Branding</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Video</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Paid Ads</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Web</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Retainers</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Creative Consulting</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Miami, FL</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>En / Es</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Graphic Design</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Branding</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Video</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Paid Ads</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Web</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Retainers</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Creative Consulting</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Miami, FL</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>En / Es</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="blob hero-blob-1" aria-hidden="true"></div>
+  <div class="blob hero-blob-2" aria-hidden="true"></div>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Est. 2023 &nbsp;·&nbsp; Miami, FL</p>
+    <h1 class="hero-headline">A <em>creative</em><br>engine powering<br>your ideas.</h1>
+    <p class="hero-body">Branding, design, and advertising built to make something you are proud of.</p>
+    <div class="hero-ctas">
+      <a href="mailto:hi@28cylinders.com" class="btn-primary">Let's work together</a>
+      <a href="#services" class="btn-ghost">See services</a>
+    </div>
+  </div>
+  <div class="hero-sticker" style="background:var(--mint);bottom:22%;left:44%;transform:rotate(-3deg)" aria-hidden="true">Bilingual</div>
+  <div class="hero-sticker" style="background:var(--lavender);top:26%;left:47%;transform:rotate(2deg)" aria-hidden="true">Miami FL</div>
+  <div class="hero-right">
+    <img src="images/brand/engine.png" alt="28 Cylinders creative engine" class="hero-engine" loading="eager">
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="svc-heading">
+  <div class="services-blob" aria-hidden="true"></div>
+  <div class="services-inner">
+    <div class="services-header">
+      <h2 class="services-heading" id="svc-heading">What We <em>Do</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--teal)">Execution</span><div class="svc-card-name">Graphic Design</div></div>
+        <ul class="svc-card-items"><li>Print Collateral</li><li>Packaging Design</li><li>Trade Show + Event Materials</li><li>Merch Design</li><li>Pitch Deck</li><li>Social Media Graphics</li><li>Translation EN to ES</li></ul>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--cobalt)">Foundation</span><div class="svc-card-name">Branding</div></div>
+        <ul class="svc-card-items"><li>Full Brand Identity</li><li>Logo + Identity System</li><li>Brand Guidelines</li><li>Naming Exercise</li></ul>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--purple)">Content</span><div class="svc-card-name">Video</div></div>
+        <ul class="svc-card-items"><li>Short Form Edit</li><li>Long Form Video Edit</li><li>Monthly Video Package</li></ul>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--pink)">Performance</span><div class="svc-card-name">Paid Ads</div></div>
+        <ul class="svc-card-items"><li>Meta Campaign</li><li>Google Campaign</li><li>Static Ad Set</li><li>Mixed Ad Set</li><li>Monthly Management</li></ul>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--sky);color:#000">Digital</span><div class="svc-card-name">Web</div></div>
+        <ul class="svc-card-items"><li>Email Marketing</li><li>Landing Page</li><li>Full Website</li><li>Website Refresh</li></ul>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--orange)">Ongoing</span><div class="svc-card-name">Retainers</div></div>
+        <ul class="svc-card-items"><li>Brand Retainer</li><li>Social Content Creation</li><li>Full Social Management</li><li>Monthly Video Package</li></ul>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-head"><span class="svc-tag" style="background:var(--yellow);color:#000">Strategy</span><div class="svc-card-name">Creative Consulting</div></div>
+        <ul class="svc-card-items"><li>Research + Competitive Analysis</li><li>Brand Strategy</li><li>Written Recommendations</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="work" aria-labelledby="work-heading">
+  <div class="projects-blob" aria-hidden="true"></div>
+  <div class="projects-inner">
+    <div class="projects-header">
+      <h2 class="projects-title" id="work-heading">Selected <em>Work</em></h2>
+      <a href="work.html" class="view-all-link">View all work</a>
+    </div>
+    <div class="projects-grid">
+
+      <a href="work.html#optimal-packaging" class="project-card reveal" aria-label="View Optimal Packaging Suite case study">
+        <span class="project-badge" style="background:var(--teal);color:#fff">Graphic Design</span>
+        <img src="images/optimal-packaging/thumb.png" alt="Optimal Packaging Suite" class="project-img" loading="eager">
+        <div class="project-overlay"><p class="project-meta">Print Design</p><p class="project-name">Optimal Packaging Suite</p></div>
+      </a>
+
+      <a href="work.html#coco" class="project-card reveal" aria-label="View Coco Media Productions case study">
+        <span class="project-badge" style="background:var(--cobalt);color:#fff">Branding</span>
+        <img src="images/coco/thumb.png" alt="Coco Media Productions" class="project-img" loading="lazy">
+        <div class="project-overlay"><p class="project-meta">Brand Identity</p><p class="project-name">Coco Media Productions</p></div>
+      </a>
+
+      <a href="work.html#think-twice" class="project-card reveal" aria-label="View Think Twice Media case study">
+        <span class="project-badge" style="background:var(--sky);color:#000">Digital</span>
+        <img src="images/think-twice/1.png" alt="Think Twice Media: Email Marketing" class="project-img" loading="lazy">
+        <div class="project-overlay"><p class="project-meta">Email Marketing</p><p class="project-name">Think Twice Media: Email Marketing</p></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="about-blob" aria-hidden="true"></div>
+  <div class="about-inner">
+    <div class="about-top reveal">
+      <h2 class="about-statement" id="about-heading">A tight network<br>of artists and makers.<br><em>The engine oil.</em></h2>
+      <div class="about-copy">
+        <p>We are no-bullshit individuals who refuse to do anything we do not believe in. Our goal is to be proud of everything we create.</p>
+        <p>28 Cylinders was founded by <strong>Sofia Mondelo</strong>, a Zillennial creative who grew up immersed in the entertainment industry and has lived and worked across cultures. That perspective shows up in every project.</p>
+        <p>Throughout her career she has built a circle of talented artists, designers, directors, and makers who care too much and would not have it any other way. They are the engine oil that keeps this running.</p>
+        <p>Let's find your extremes. Then let's find your balance. We want to collaborate, and we want to share a good laugh while we are at it.</p>
+      </div>
+    </div>
+    <div class="about-img-row reveal">
+      <img src="images/key-biscayne.png" alt="Key Biscayne, Miami" class="about-img-wide about-img-photo" loading="lazy">
+      <img src="images/sofia-headshot.png" alt="Sofia Mondelo, founder of 28 Cylinders" class="about-img-tall about-img-photo" loading="lazy">
+    </div>
+    <div class="about-bubbles">
+      <div class="bubble reveal-r" style="--rot:-.6deg">
+        <div class="bubble-label">The number</div>
+        <div class="bubble-num" style="color:var(--cobalt)">28</div>
+        <p>Balance, prosperity, and beautiful partnerships. A number that carries weight without ego.</p>
+      </div>
+      <div class="bubble reveal-r" style="--rot:.5deg">
+        <div class="bubble-label">The name</div>
+        <div class="bubble-num" style="color:var(--purple)">Cylinders</div>
+        <p>As in the engine. The thing that actually moves you forward. Creative power, always firing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+  <div class="contact-blob" aria-hidden="true"></div>
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <h2 id="contact-heading">Let's<br><em>work</em><br>together.</h2>
+      <p>Got a project? A half-baked idea? A brand that needs to stop being invisible? We want to hear it.</p>
+      <a href="mailto:hi@28cylinders.com" class="contact-email-link" aria-label="Email 28 Cylinders">hi@28cylinders.com</a>
+      <div class="contact-lang"><span class="lang-pill">English</span><span class="lang-pill">Español</span></div>
+    </div>
+    <div class="contact-services reveal">
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--teal)"></div>Graphic Design</div>
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--cobalt)"></div>Branding</div>
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--purple)"></div>Video</div>
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--pink)"></div>Paid Ads</div>
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--sky)"></div>Web</div>
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--orange)"></div>Retainers</div>
+      <div class="contact-svc-line"><div class="csl-dot" style="background:var(--yellow)"></div>Creative Consulting</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a class="footer-logo" href="#" aria-label="28 Cylinders">
+        <img src="images/brand/logo.png" alt="28 Cylinders" height="16">
+      </a>
+      <nav class="footer-nav" aria-label="Footer links">
+        <a href="#services">Services</a>
+        <a href="work.html">Work</a>
+        <a href="#about">Studio</a>
+        <a href="mailto:hi@28cylinders.com">Email</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2023–2026 28 Cylinders LLC · Miami, FL · hi@28cylinders.com</p>
+      <p class="footer-love">Made with lots of love</p>
+    </div>
+  </div>
+</footer>
+
+<script src="projects.js"></script>
+<script>
+// ── NAV ──
+const nav = document.getElementById('nav');
+const hamburger = document.getElementById('hamburger');
+const drawer = document.getElementById('drawer');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 10);
+}, { passive: true });
+
+hamburger.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+// Close drawer on link click
+drawer.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+    document.body.style.overflow = '';
+  });
+});
+
+// ── SCROLL REVEAL ──
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal, .reveal-r').forEach(el => ro.observe(el));
+
+// ── PROJECT DATA (sourced from projects.js) ──
+const projectsMap = {};
+PROJECTS.forEach(p => { projectsMap[p.id] = p; });
+</script>
+<script>
+(function(){
+  const dot = document.getElementById('cursor-dot');
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.classList.add('active');
+  });
+  document.addEventListener('mouseleave', () => dot.classList.remove('active'));
+})();
+</script>
+</body>
+</html>

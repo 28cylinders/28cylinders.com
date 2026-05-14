@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Work — 28 Cylinders Creative Studio Miami</title>
+<meta name="description" content="Selected work from 28 Cylinders — a Miami-based creative studio specializing in branding, graphic design, art direction, and paid advertising.">
+<meta name="keywords" content="branding studio Miami, graphic design Miami, art direction, portfolio, creative agency Miami, Sofia Mondelo">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Work — 28 Cylinders Creative Studio Miami">
+<meta property="og:description" content="Selected projects from 28 Cylinders Creative Studio.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://28cylinders.com/work.html">
+<meta property="og:image" content="https://28cylinders.com/images/brand/logo-02.png">
+<link rel="canonical" href="https://28cylinders.com/work.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── PROJECT GRID ── */
+.projects-inner{max-width:1100px;margin:0 auto;position:relative}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.project-card{aspect-ratio:3/2;position:relative;overflow:hidden;background:#111;border:none;outline:none;border-radius:20px;text-decoration:none;display:block;cursor:pointer}
+.project-img-ph{position:absolute;inset:0;width:100%;height:100%;border-radius:20px}
+.cs-hero-img-ph{width:100%;aspect-ratio:21/9}
+.project-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(0.25,0.46,0.45,0.94)}
+.project-card:hover .project-img{transform:scale(1.04)}
+.project-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 28px;opacity:0;transition:opacity .3s}
+.project-card:hover .project-overlay{opacity:1}
+.project-meta{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);opacity:.6;margin-bottom:5px}
+.project-name{font-size:18px;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:var(--white)}
+.project-badge{position:absolute;top:16px;left:16px;z-index:2;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 13px}
+
+/* ── WORK PAGE HERO ── */
+.work-hero{
+  background:var(--black);
+  padding:80px 48px 72px;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.work-hero-blob{
+  position:absolute;width:500px;height:500px;
+  border-radius:55% 45% 40% 60%/60% 40% 55% 45%;
+  background:var(--lavender);opacity:.05;
+  top:-120px;right:-80px;
+  animation:blobFloat 11s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+.work-hero-inner{max-width:1100px;margin:0 auto;position:relative}
+.work-hero-eyebrow{
+  font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  opacity:.35;margin-bottom:22px;
+  animation:fadeUp .6s ease .1s both;
+}
+.work-hero-title{
+  font-size:clamp(36px,5vw,72px);font-weight:600;
+  line-height:1.0;letter-spacing:-.03em;text-transform:uppercase;
+  margin-bottom:22px;
+  animation:fadeUp .7s ease .2s both;
+}
+.work-hero-title em{font-style:italic;font-weight:300}
+.work-hero-body{
+  font-size:16px;font-weight:300;line-height:1.75;
+  opacity:.65;max-width:480px;
+  animation:fadeUp .7s ease .35s both;
+}
+
+/* ── WORK GRID SECTION ── */
+.work-grid-section{
+  background:var(--black);
+  padding:0 48px 80px;
+}
+
+/* ── CASE STUDY ── */
+.case-study{
+  background:var(--black);
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-bottom:80px;
+  scroll-margin-top:calc(var(--nav-h) + 28px);
+}
+.cs-hero-img-wrap{width:100%;line-height:0;overflow:hidden}
+.cs-hero-img{
+  width:100%;max-height:85vh;object-fit:contain;
+  background:#080808;display:block;
+  will-change:transform;
+}
+.cs-inner{max-width:1100px;margin:0 auto;padding:0 48px}
+.cs-header{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  padding:52px 0 40px;gap:24px;flex-wrap:wrap;
+}
+.cs-header-left{display:flex;flex-direction:column;gap:10px}
+.cs-tag{
+  display:inline-block;border-radius:999px;
+  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 14px;width:fit-content;
+}
+.cs-title{
+  font-size:clamp(32px,4.5vw,60px);font-weight:600;
+  letter-spacing:-.03em;text-transform:uppercase;line-height:1;
+}
+.cs-category{
+  font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--white);
+}
+.cs-year{
+  font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--white);opacity:.55;padding-top:6px;white-space:nowrap;
+}
+.cs-intro{
+  display:grid;grid-template-columns:1fr 360px;
+  gap:80px;align-items:start;
+  padding:64px 0 0;
+}
+.cs-work{padding:64px 0 0;max-width:720px}
+.cs-desc{font-size:16px;font-weight:300;line-height:1.8;color:var(--white);margin-bottom:24px}
+.cs-challenge-text,.cs-outcome-text,.cs-client-text{
+  font-size:16px;font-weight:300;line-height:1.8;color:var(--white);
+}
+.cs-label{
+  font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--white);opacity:.5;margin-bottom:14px;
+}
+.cs-challenge,.cs-outcome,.cs-client{margin-bottom:24px}
+.cs-note{
+  font-size:13px;font-weight:400;font-style:italic;
+  color:var(--white);padding:16px;
+  border:1.5px dashed rgba(255,255,255,.2);border-radius:12px;
+  margin-top:8px;
+}
+.cs-deliverables{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0}
+.cs-del-pill{
+  font-size:11px;font-weight:500;padding:6px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.15);
+  color:var(--white);
+}
+.cs-meta-col .cs-label{margin-bottom:16px}
+.cs-ext-link{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:24px;font-size:13px;font-weight:600;letter-spacing:.02em;
+  color:#000;text-decoration:none;
+  background:var(--white);border:none;border-radius:999px;
+  padding:12px 22px;transition:opacity .2s;
+}
+.cs-ext-link:hover{opacity:.85}
+
+/* Stats */
+.cs-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
+.cs-stat{background:#0a0a0a;padding:36px 28px}
+.cs-stat-value{display:block;font-size:44px;font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
+.cs-stat-label{display:block;font-size:13px;font-weight:500;color:var(--white);margin-bottom:10px}
+.cs-stat-bench{display:block;font-size:11px;color:rgba(255,255,255,.55);line-height:1.5}
+@media(max-width:600px){.cs-stats{grid-template-columns:1fr}}
+
+/* Script */
+.cs-script{background:#0a0a0a;padding:48px;margin-top:48px}
+.cs-script-tag{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:36px}
+.cs-script-body{max-width:560px}
+.cs-script-direction{font-size:12px;font-style:italic;color:rgba(255,255,255,.5);margin:20px 0 6px}
+.cs-script-direction:first-of-type{margin-top:0}
+.cs-script-line{font-size:16px;font-weight:400;line-height:1.65;color:var(--white)}
+@media(max-width:480px){.cs-script{padding:32px 20px}}
+
+/* Gallery */
+.cs-gallery{column-count:2;column-gap:16px;margin-top:48px}
+.cs-gallery-item{break-inside:avoid;margin-bottom:24px;width:100%;border-radius:12px;overflow:hidden;position:relative}
+.cs-gallery-item img,.cs-gallery-item video{width:100%;height:auto;display:block}
+.cs-gallery-video{cursor:pointer}
+.cs-gallery-label{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;pointer-events:none}
+.cs-icon-row{display:flex;gap:24px;align-items:center;justify-content:center;padding:40px 0;margin-top:48px}
+.cs-icon-row img{width:calc(33% - 16px);max-width:180px;height:auto}
+.cs-icon-row--scroll{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:16px;-ms-overflow-style:none;scrollbar-width:none}
+.cs-icon-row--scroll::-webkit-scrollbar{display:none}
+.cs-icon-row--scroll img{width:auto;max-width:none;height:160px;flex-shrink:0}
+.grid-hidden{display:none}
+.load-more-btn{display:block;margin:48px auto 0;padding:14px 40px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:var(--white);font-family:'Urbanist',sans-serif;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s,border-color .2s}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.filter-btn{border:1px solid rgba(255,255,255,.2);background:transparent;color:var(--white);border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:9px 20px;cursor:pointer;transition:background .2s,border-color .2s,color .2s;font-family:'Urbanist',sans-serif}
+.filter-btn:hover{border-color:rgba(255,255,255,.5)}
+.filter-btn.active{background:var(--white);color:#000;border-color:var(--white)}
+.load-more-btn:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4)}
+
+/* Editorial layout */
+.cs-editorial{margin-top:24px}
+.cs-editorial-b1{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:48px 0}
+.cs-editorial-b1-text{display:flex;flex-direction:column;gap:0}
+.cs-editorial-text{font-size:16px;line-height:1.8;color:var(--white)}
+.cs-editorial-b1-imgs{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.cs-editorial-b1-img{width:100%;height:260px;object-fit:cover;display:block}
+.cs-editorial-b2{font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);padding:40px 0;max-width:680px}
+.cs-editorial-b3{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.cs-editorial-b3-img{width:100%;height:340px;object-fit:cover;display:block}
+.cs-editorial-b4{font-size:16px;line-height:1.8;color:var(--white);padding-top:40px;max-width:680px}
+@media(max-width:860px){
+  .cs-editorial-b1{grid-template-columns:1fr;gap:24px;padding:32px 0}
+  .cs-editorial-b3-img{height:220px}
+}
+@media(max-width:480px){
+  .cs-editorial-b1-img{height:160px}
+  .cs-editorial-b3-img{height:160px}
+}
+
+/* Before / After */
+.cs-ba{padding:48px 0 0}
+.ba-wrap{
+  position:relative;overflow:hidden;
+  background:#0a0a0a;border-radius:4px;
+  cursor:ew-resize;user-select:none;touch-action:none;
+  height:440px;
+}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.ba-img-before{clip-path:inset(0 50% 0 0);transition:clip-path 0s}
+.ba-handle{
+  position:absolute;top:0;bottom:0;left:50%;
+  width:2px;background:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  transform:translateX(-50%);pointer-events:none;
+}
+.ba-circle{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--white);color:var(--black);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:700;letter-spacing:-.02em;
+  box-shadow:0 2px 12px rgba(0,0,0,.4);
+}
+.ba-tag{
+  position:absolute;bottom:16px;
+  font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--white);background:rgba(0,0,0,.65);
+  padding:5px 12px;border-radius:999px;pointer-events:none;
+}
+.ba-tag-before{left:16px}
+.ba-tag-after{right:16px}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:24px}
+.lb.open{opacity:1;pointer-events:all}
+.lb-img{max-width:90vw;max-height:90vh;object-fit:contain;display:block}
+.lb-video{max-width:90vw;max-height:82vh;display:none;outline:none}
+.lb-close{position:absolute;top:20px;right:24px;background:none;border:none;cursor:pointer;color:var(--white);font-size:28px;line-height:1;opacity:.55;transition:opacity .2s}
+.lb-close:hover{opacity:1}
+
+/* Info cards */
+.cs-info-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:48px 0 0}
+.cs-info-card{background:#111;border-radius:16px;padding:28px}
+.cs-card-label{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;display:block}
+.cs-card-label-desktop{display:block}
+.cs-card-toggle{display:none}
+.cs-card-body{}
+.cs-info-card-text{font-size:14px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.75)}
+.cs-bullet-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.cs-bullet-list li{display:flex;align-items:flex-start;gap:8px;font-size:14px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.75)}
+.cs-bullet{font-size:12px;flex-shrink:0;line-height:1.75}
+
+/* Closing copy */
+.cs-closing-copy{max-width:680px;margin:0 auto;padding:64px 0}
+.cs-closing-copy p{font-size:16px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:1.2em}
+.cs-closing-copy p:last-child{margin-bottom:0}
+
+/* Back button */
+.cs-back-wrap{padding:52px 0 0}
+.cs-back{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--white);text-decoration:none;opacity:.55;
+  transition:opacity .2s,gap .2s;
+  background:none;border:none;cursor:pointer;padding:0;
+}
+.cs-back::before{content:'←';transition:transform .2s}
+.cs-back:hover{opacity:1;gap:12px}
+.cs-back:hover::before{transform:translateX(-4px)}
+
+/* View states */
+.view-hidden{display:none!important}
+
+/* Next project */
+.cs-next{
+  padding-top:48px;
+  display:flex;justify-content:flex-end;
+}
+.cs-next-link{
+  background:none;border:none;cursor:pointer;
+  color:var(--white);
+  display:flex;flex-direction:column;align-items:flex-end;gap:6px;
+  transition:opacity .2s;
+  opacity:.55;padding:0;
+}
+.cs-next-link:hover{opacity:1}
+.cs-next-label{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--white)}
+.cs-next-title{font-size:20px;font-weight:600;letter-spacing:-.01em;text-transform:uppercase}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){
+  .work-hero{padding:64px 36px 56px}
+  .work-grid-section{padding:0 36px 64px}
+  .cs-inner{padding:0 36px}
+}
+@media(max-width:860px){
+  .work-hero{padding:56px 24px 52px}
+  .work-grid-section{padding:0 0 56px}
+  .projects-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+
+  .case-study{padding-bottom:56px}
+  .cs-hero-img{max-height:60vh}
+  .cs-inner{padding:0 24px}
+  .cs-header{padding:36px 0 28px}
+  .cs-info-cards{grid-template-columns:1fr;gap:8px;padding:36px 0 0}
+  .cs-info-card{padding:0}
+  .cs-card-label-desktop{display:none}
+  .cs-card-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left}
+  .cs-card-toggle .cs-card-label{margin-bottom:0}
+  .cs-card-chevron{font-size:18px;color:rgba(255,255,255,.4);transition:transform .25s;flex-shrink:0}
+  .cs-info-card.open .cs-card-chevron{transform:rotate(90deg)}
+  .cs-card-body{padding:0 24px 0;max-height:0;overflow:hidden;transition:max-height .35s ease,padding-bottom .35s ease}
+  .cs-info-card.open .cs-card-body{max-height:600px;padding-bottom:24px}
+  .cs-gallery{column-count:1}
+  .cs-next{justify-content:flex-start}
+  .cs-next-link{align-items:flex-start}
+}
+@media(max-width:480px){
+  .work-hero-title{font-size:clamp(28px,9vw,48px)}
+  .projects-grid{grid-template-columns:1fr;gap:8px}
+  .cs-gallery{column-count:1}
+}
+</style>
+</head>
+<body class="page-offset">
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html" aria-label="28 Cylinders Home">
+    <img src="images/brand/logo.png" alt="28 Cylinders">
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="work.html" class="nav-active">Work</a></li>
+    <li><a href="index.html#about">Studio</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="mailto:hi@28cylinders.com" class="nav-cta">Let's Work</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="drawer" role="dialog" aria-label="Mobile menu">
+  <a href="index.html#services">Services</a>
+  <a href="work.html">Work</a>
+  <a href="index.html#about">Studio</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="mailto:hi@28cylinders.com" class="drawer-cta">Let's Work</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Graphic Design</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Branding</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Video</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Paid Ads</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Web</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Retainers</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Creative Consulting</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Miami, FL</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>En / Es</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Graphic Design</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Branding</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Video</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Paid Ads</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Web</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Retainers</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Creative Consulting</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>Miami, FL</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+    <span>En / Es</span><span style="opacity:.2">&nbsp;*&nbsp;</span>
+  </div>
+</div>
+
+<!-- WORK HERO -->
+<section class="work-hero" aria-label="Work page hero">
+  <div class="work-hero-blob blob" aria-hidden="true"></div>
+  <div class="work-hero-inner">
+    <p class="work-hero-eyebrow">Selected Work &nbsp;·&nbsp; Miami, FL</p>
+    <h1 class="work-hero-title">What we've<br>been <em>building.</em></h1>
+    <p class="work-hero-body">A collection of brands, campaigns, and identities — built with people we believe in. Every project starts with a real conversation and ends with something we are proud to have made.</p>
+  </div>
+</section>
+
+<!-- WORK GRID -->
+<section class="work-grid-section" aria-labelledby="work-grid-heading">
+  <div class="projects-inner">
+    <div class="filter-bar" id="filterBar"></div>
+    <div class="projects-grid" id="workGrid" role="list" aria-label="Project list"></div>
+  </div>
+</section>
+
+<!-- CASE STUDIES (rendered by JS from projects.js) -->
+<div id="caseStudies"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html" aria-label="28 Cylinders">
+        <img src="images/brand/logo.png" alt="28 Cylinders">
+      </a>
+      <nav class="footer-nav" aria-label="Footer links">
+        <a href="index.html#services">Services</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#about">Studio</a>
+        <a href="mailto:hi@28cylinders.com">Email</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2023–2026 28 Cylinders LLC &middot; Miami, FL &middot; hi@28cylinders.com</p>
+      <p class="footer-love">Made with lots of love</p>
+    </div>
+  </div>
+</footer>
+
+<script src="projects.js"></script>
+<script>
+// ── NAV ──
+const nav = document.getElementById('nav');
+const hamburger = document.getElementById('hamburger');
+const drawer = document.getElementById('drawer');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 10);
+}, { passive: true });
+
+hamburger.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+drawer.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+    document.body.style.overflow = '';
+  });
+});
+
+// ── SCROLL REVEAL ──
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+
+function observeReveal() {
+  document.querySelectorAll('.reveal, .reveal-r').forEach(el => ro.observe(el));
+}
+
+// ── ROUTER ──
+const workHero    = document.querySelector('.work-hero');
+const workGridSec = document.querySelector('.work-grid-section');
+const caseStudies = document.getElementById('caseStudies');
+
+function showGrid() {
+  workHero.classList.remove('view-hidden');
+  workGridSec.classList.remove('view-hidden');
+  caseStudies.classList.add('view-hidden');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+function showProject(id) {
+  const project = PROJECTS.find(p => p.id === id);
+  if (!project) { showGrid(); return; }
+  workHero.classList.add('view-hidden');
+  workGridSec.classList.add('view-hidden');
+  caseStudies.classList.remove('view-hidden');
+  document.querySelectorAll('.case-study').forEach(s => {
+    s.classList.toggle('view-hidden', s.id !== id);
+  });
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  document.querySelectorAll(`#${CSS.escape(id)} .reveal, #${CSS.escape(id)} .reveal-r`).forEach(el => {
+    el.classList.remove('visible');
+    ro.observe(el);
+  });
+}
+
+function route() {
+  const id = location.hash.slice(1);
+  if (id && PROJECTS.find(p => p.id === id)) showProject(id);
+  else showGrid();
+}
+
+window.addEventListener('popstate', route);
+
+// ── RENDER WORK GRID ──
+const GRID_INITIAL = 12;
+let filterAllLoaded = false;
+
+function renderGrid() {
+  const grid = document.getElementById('workGrid');
+  PROJECTS.forEach((p, i) => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'project-card reveal';
+    card.dataset.tag = p.tagLabel;
+    if (i >= GRID_INITIAL) card.classList.add('grid-hidden');
+    card.setAttribute('role', 'listitem');
+    card.setAttribute('aria-label', 'View ' + p.title + ' case study');
+    card.addEventListener('click', () => {
+      history.pushState({}, '', '#' + p.id);
+      showProject(p.id);
+    });
+    const isVideoThumb = /\.(mp4|webm)$/i.test(p.thumbnail || '');
+    const imgHTML = !p.thumbnail
+      ? `<div class="project-img-ph" style="background:${p.color}"></div>`
+      : isVideoThumb
+        ? `<video src="${p.thumbnail}" class="project-img" autoplay muted loop playsinline></video>`
+        : `<img src="${p.thumbnail}" alt="${p.title}" class="project-img" loading="${i === 0 ? 'eager' : 'lazy'}">`;
+    card.innerHTML = `
+      <span class="project-badge" style="background:${p.color};color:${p.tagTextColor}">${p.tagLabel}</span>
+      ${imgHTML}
+      <div class="project-overlay">
+        <p class="project-meta">${p.category}</p>
+        <p class="project-name">${p.title}</p>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  if (PROJECTS.length > GRID_INITIAL) {
+    const btn = document.createElement('button');
+    btn.className = 'load-more-btn';
+    btn.textContent = 'Load more';
+    btn.addEventListener('click', () => {
+      filterAllLoaded = true;
+      grid.querySelectorAll('.grid-hidden').forEach(c => {
+        c.classList.remove('grid-hidden');
+        ro.observe(c);
+      });
+      btn.remove();
+    });
+    grid.parentElement.appendChild(btn);
+  }
+}
+
+function renderFilters() {
+  const bar = document.getElementById('filterBar');
+  const tags = ['All', ...new Set(PROJECTS.map(p => p.tagLabel))];
+  tags.forEach(tag => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (tag === 'All' ? ' active' : '');
+    btn.textContent = tag;
+    btn.addEventListener('click', () => {
+      bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter(tag);
+    });
+    bar.appendChild(btn);
+  });
+}
+
+function applyFilter(tag) {
+  const cards = [...document.querySelectorAll('#workGrid .project-card')];
+  const loadMoreBtn = document.querySelector('.load-more-btn');
+  if (tag === 'All') {
+    cards.forEach((c, i) => {
+      c.classList.toggle('grid-hidden', !filterAllLoaded && i >= GRID_INITIAL);
+    });
+    if (loadMoreBtn) loadMoreBtn.style.display = '';
+  } else {
+    cards.forEach(c => {
+      c.classList.toggle('grid-hidden', c.dataset.tag !== tag);
+    });
+    if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+  }
+}
+
+// ── RENDER CASE STUDIES ──
+function renderCaseStudies() {
+  const container = document.getElementById('caseStudies');
+
+  function paras(text, cls) {
+    return text.split('\n\n').map(t => `<p class="${cls}">${t.trim()}</p>`).join('');
+  }
+
+  function mediaItem(src, title, idx) {
+    const isVideo = /\.(mp4|webm)$/i.test(src);
+    const el = isVideo
+      ? `<video src="${src}" class="cs-gallery-img" autoplay muted loop playsinline></video>`
+      : `<img src="${src}" alt="${title} project detail" loading="lazy" class="cs-gallery-img" style="transition-delay:${idx * 80}ms">`;
+    return `<div class="cs-gallery-item reveal${isVideo ? ' cs-gallery-wide' : ''}">${el}</div>`;
+  }
+
+  function featuredItem(src, title, isFull) {
+    const isVideo = /\.(mp4|webm)$/i.test(src);
+    const el = isVideo
+      ? `<video src="${src}" class="cs-gallery-img" autoplay muted loop playsinline></video>`
+      : `<img src="${src}" alt="${title} project detail" loading="lazy" class="cs-gallery-img">`;
+    return `<div class="cs-gallery-item reveal ${isFull ? 'cs-gallery-full' : 'cs-gallery-pair'}">${el}</div>`;
+  }
+
+  function editorialItem(src, title, cls) {
+    const isVideo = /\.(mp4|webm)$/i.test(src);
+    return isVideo
+      ? `<video src="${src}" class="${cls}" autoplay muted loop playsinline></video>`
+      : `<img src="${src}" alt="${title}" loading="lazy" class="${cls}">`;
+  }
+
+  function editorialLayout(p) {
+    const pars = p.description ? p.description.split('\n\n').map(t => t.trim()) : [];
+    const imgs = p.images || [];
+    return `<div class="cs-editorial">
+      <div class="cs-editorial-b1 reveal">
+        <div class="cs-editorial-b1-text">
+          ${pars[0] ? `<p class="cs-editorial-text">${pars[0]}</p>` : ''}
+        </div>
+        <div class="cs-editorial-b1-imgs">
+          ${imgs[0] ? editorialItem(imgs[0], p.title, 'cs-editorial-b1-img') : ''}
+          ${imgs[1] ? editorialItem(imgs[1], p.title, 'cs-editorial-b1-img') : ''}
+        </div>
+      </div>
+      ${pars[1] ? `<p class="cs-editorial-b2 reveal">${pars[1]}</p>` : ''}
+      <div class="cs-editorial-b3 reveal">
+        ${[imgs[2], imgs[3], imgs[4]].filter(Boolean).map(src => editorialItem(src, p.title, 'cs-editorial-b3-img')).join('')}
+      </div>
+      ${pars[2] ? `<p class="cs-editorial-b4 reveal">${pars[2]}</p>` : ''}
+    </div>`;
+  }
+
+  function buildInfoCards(p) {
+    function makeCard(label, id, bodyHTML) {
+      return `
+        <div class="cs-info-card" style="border-top:2px solid ${p.color}">
+          <button class="cs-card-toggle" type="button" aria-expanded="false" aria-controls="${id}">
+            <span class="cs-card-label">${label}</span>
+            <span class="cs-card-chevron" aria-hidden="true">›</span>
+          </button>
+          <span class="cs-card-label cs-card-label-desktop">${label}</span>
+          <div class="cs-card-body" id="${id}">${bodyHTML}</div>
+        </div>`;
+    }
+    const cards = [];
+    if (p.client) {
+      cards.push(makeCard('The Client', `${p.id}-c1`, `<p class="cs-info-card-text">${p.client}</p>`));
+    }
+    if (p.challenge) {
+      const lines = p.challenge.split('\n').map(l => l.trim()).filter(Boolean);
+      const bulletHTML = `<ul class="cs-bullet-list">${lines.map(l =>
+        `<li><span class="cs-bullet" style="color:${p.color}">•</span><span>${l}</span></li>`
+      ).join('')}</ul>`;
+      cards.push(makeCard('The Ask', `${p.id}-c2`, bulletHTML));
+    }
+    const delHTML = (p.deliverables||[]).map(d => `<span class="cs-del-pill">${d}</span>`).join('');
+    const lnk = p.link ? `<a class="cs-ext-link" href="${p.link}" target="_blank" rel="noopener noreferrer">↗ ${p.linkLabel||'View it live'}</a>` : '';
+    cards.push(makeCard('What We Delivered', `${p.id}-c3`, `<div class="cs-deliverables">${delHTML}</div>${lnk}`));
+    return `<div class="cs-info-cards reveal">${cards.join('')}</div>`;
+  }
+
+  function buildGallery(p) {
+    const labels = p.labels || {};
+    let iconRowHTML = '';
+    if (p.iconRow && p.iconRow.length) {
+      const icons = p.iconRow.map(src =>
+        `<img src="${src}" alt="${p.title} icon" loading="lazy">`
+      ).join('');
+      iconRowHTML = `<div class="cs-icon-row${p.iconRowScroll ? ' cs-icon-row--scroll' : ''}">${icons}</div>`;
+    }
+    if (!p.images || !p.images.length) return iconRowHTML;
+    const items = p.images.map(src => {
+      const filename = src.split('/').pop();
+      const label = labels[filename] || '';
+      const isVideo = /\.(mp4|webm)$/i.test(src);
+      const el = isVideo
+        ? `<video muted loop playsinline class="cs-gallery-video"><source src="${src}"></video>`
+        : `<img src="${src}" alt="${p.title}" loading="lazy" class="cs-row-img">`;
+      const labelHTML = label ? `<span class="cs-gallery-label">${label}</span>` : '';
+      return `<div class="cs-gallery-item">${el}${labelHTML}</div>`;
+    }).join('');
+    const colStyle = p.galleryColumns ? ` style="column-count:${p.galleryColumns}"` : '';
+    return `${iconRowHTML}<div class="cs-gallery"${colStyle}>${items}</div>`;
+  }
+
+  PROJECTS.forEach((p, i) => {
+    const next = PROJECTS[(i + 1) % PROJECTS.length];
+
+    const heroSrc = p.hero || p.thumbnail;
+    const isVideoHero = /\.(mp4|webm)$/i.test(heroSrc || '');
+    const heroHTML = !heroSrc
+      ? `<div class="cs-hero-img-ph" style="background:${p.color}"></div>`
+      : isVideoHero
+        ? `<video src="${heroSrc}" class="cs-hero-img" autoplay muted loop playsinline></video>`
+        : `<img src="${heroSrc}" alt="${p.title}" class="cs-hero-img" loading="lazy">`;
+
+    const infoCardsHTML = buildInfoCards(p);
+    const ngGalleryHTML = buildGallery(p);
+
+    const baHTML = p.beforeAfter
+      ? `<div class="cs-ba reveal">
+          <p class="cs-label">Before / After</p>
+          <div class="ba-wrap">
+            <img class="ba-img" src="${p.beforeAfter.after}" alt="${p.beforeAfter.afterLabel || 'After'}">
+            <img class="ba-img ba-img-before" src="${p.beforeAfter.before}" alt="${p.beforeAfter.beforeLabel || 'Before'}">
+            <div class="ba-handle"><div class="ba-circle">&#8596;</div></div>
+            <span class="ba-tag ba-tag-before">${p.beforeAfter.beforeLabel || 'Before'}</span>
+            <span class="ba-tag ba-tag-after">${p.beforeAfter.afterLabel || 'After'}</span>
+          </div>
+        </div>`
+      : '';
+
+    const noteHTML = p.note ? `<p class="cs-note">${p.note}</p>` : '';
+
+    const statsHTML = p.stats && p.stats.length
+      ? `<div class="cs-stats reveal">
+          ${p.stats.map(s => `<div class="cs-stat">
+            <span class="cs-stat-value" style="color:${p.color}">${s.value}</span>
+            <span class="cs-stat-label">${s.label}</span>
+            ${s.benchmark ? `<span class="cs-stat-bench">${s.benchmark}</span>` : ''}
+          </div>`).join('')}
+        </div>`
+      : '';
+
+    const scriptHTML = p.script && p.script.length
+      ? `<div class="cs-script reveal">
+          <span class="cs-script-tag">Approved Script</span>
+          <div class="cs-script-body">
+            ${p.script.map(s => s.type === 'direction'
+              ? `<p class="cs-script-direction">${s.text}</p>`
+              : `<p class="cs-script-line">${s.text}</p>`
+            ).join('')}
+          </div>
+        </div>`
+      : '';
+
+    const section = document.createElement('section');
+    section.className = 'case-study view-hidden';
+    section.id = p.id;
+    section.setAttribute('aria-label', p.title + ' case study');
+    section.innerHTML = `
+      <div class="cs-back-wrap cs-inner">
+        <button class="cs-back" onclick="history.pushState({},'','work.html');showGrid()" aria-label="Back to all work">All work</button>
+      </div>
+      <div class="cs-hero-img-wrap reveal">${heroHTML}</div>
+      <div class="cs-inner">
+        <div class="cs-header reveal">
+          <div class="cs-header-left">
+            <span class="cs-tag" style="background:${p.color};color:${p.tagTextColor}">${p.tagLabel}</span>
+            <h2 class="cs-title">${p.title}</h2>
+            <p class="cs-category">${p.category}</p>
+          </div>
+          <div class="cs-year">${p.year}</div>
+        </div>
+        ${infoCardsHTML}
+        ${statsHTML}
+        ${noteHTML}
+        ${baHTML}
+        ${ngGalleryHTML}
+        ${scriptHTML}
+        <div class="cs-next reveal">
+          <button class="cs-next-link" onclick="history.pushState({},'','#${next.id}');showProject('${next.id}')" aria-label="Next project: ${next.title}">
+            <span class="cs-next-label">Next project</span>
+            <span class="cs-next-title">${next.title} &rarr;</span>
+          </button>
+        </div>
+      </div>
+    `;
+    container.appendChild(section);
+
+    section.querySelectorAll('.cs-card-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.cs-info-card');
+        const isOpen = card.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+
+    section.querySelectorAll('.cs-gallery-video').forEach(v => {
+      v.addEventListener('mouseenter', () => { if (!lb.classList.contains('open')) v.play(); });
+      v.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
+    });
+  });
+
+  // Subtle parallax on hero image
+  window.addEventListener('scroll', () => {
+    const visible = document.querySelector('.case-study:not(.view-hidden) .cs-hero-img');
+    if (visible) visible.style.transform = `translateY(${window.scrollY * 0.08}px)`;
+  }, { passive: true });
+}
+
+// ── LIGHTBOX ──
+const lb = document.createElement('div');
+lb.className = 'lb';
+lb.setAttribute('role', 'dialog');
+lb.setAttribute('aria-label', 'Media viewer');
+lb.innerHTML = '<button class="lb-close" aria-label="Close">&#x2715;</button><img class="lb-img" src="" alt=""><video class="lb-video" controls playsinline></video>';
+document.body.appendChild(lb);
+const lbImg = lb.querySelector('.lb-img');
+const lbVid = lb.querySelector('.lb-video');
+lb.querySelector('.lb-close').addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+function openLb(src, alt) {
+  lbImg.src = src; lbImg.alt = alt || '';
+  lbImg.style.display = ''; lbVid.style.display = 'none';
+  lb.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function openLbVideo(src) {
+  lbVid.src = src;
+  lbVid.style.display = ''; lbImg.style.display = 'none';
+  lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  lbVid.load();
+}
+function closeLb() {
+  lb.classList.remove('open');
+  lbVid.pause(); lbVid.src = '';
+  document.body.style.overflow = '';
+}
+
+caseStudies.addEventListener('click', e => {
+  const img = e.target.closest('img.cs-gallery-img') || (e.target.matches('img.cs-ng-img,img.cs-row-img') ? e.target : null);
+  if (img) { openLb(img.src, img.alt); return; }
+  const vid = e.target.closest('.cs-gallery-video');
+  if (vid) {
+    const src = vid.querySelector('source')?.getAttribute('src') || '';
+    if (src) openLbVideo(src);
+  }
+});
+
+// ── BEFORE / AFTER SLIDERS ──
+function initBeforeAfter() {
+  document.querySelectorAll('.ba-wrap').forEach(wrap => {
+    const before = wrap.querySelector('.ba-img-before');
+    const handle = wrap.querySelector('.ba-handle');
+    let active = false;
+
+    function update(clientX) {
+      const r = wrap.getBoundingClientRect();
+      const pct = Math.max(2, Math.min(98, ((clientX - r.left) / r.width) * 100));
+      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pct + '%';
+    }
+
+    wrap.addEventListener('mousedown', e => { active = true; update(e.clientX); });
+    window.addEventListener('mouseup', () => { active = false; });
+    window.addEventListener('mousemove', e => { if (active) update(e.clientX); });
+    wrap.addEventListener('touchstart', e => { active = true; update(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchend', () => { active = false; });
+    window.addEventListener('touchmove', e => { if (active) update(e.touches[0].clientX); }, { passive: true });
+  });
+}
+
+// ── GALLERY ORIENTATION ──
+function detectGalleryOrientation() {
+  document.querySelectorAll('img.cs-gallery-img').forEach(img => {
+    function check() {
+      if (img.naturalWidth > img.naturalHeight * 1.2) {
+        img.closest('.cs-gallery-item').classList.add('cs-gallery-wide');
+      }
+    }
+    if (img.complete && img.naturalWidth) check();
+    else img.addEventListener('load', check);
+  });
+}
+
+// ── INIT ──
+renderGrid();
+renderFilters();
+renderCaseStudies();
+observeReveal();
+initBeforeAfter();
+detectGalleryOrientation();
+caseStudies.classList.add('view-hidden');
+route();
+</script>
+<script>
+(function(){
+  const dot = document.getElementById('cursor-dot');
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.classList.add('active');
+  });
+  document.addEventListener('mouseleave', () => dot.classList.remove('active'));
+})();
+</script>
+</body>
+</html>
