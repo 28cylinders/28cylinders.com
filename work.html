@@ -62,7 +62,7 @@
 }
 .work-hero-title em{font-style:italic;font-weight:300}
 .work-hero-body{
-  font-size:16px;font-weight:300;line-height:1.75;
+  font-size:16px;font-weight:300;line-height:1.55;
   opacity:.65;max-width:480px;
   animation:fadeUp .7s ease .35s both;
 }
@@ -115,9 +115,9 @@
   padding:64px 0 0;
 }
 .cs-work{padding:64px 0 0;max-width:720px}
-.cs-desc{font-size:16px;font-weight:300;line-height:1.8;color:var(--white);margin-bottom:24px}
+.cs-desc{font-size:16px;font-weight:300;line-height:1.5;color:var(--white);margin-bottom:24px}
 .cs-challenge-text,.cs-outcome-text,.cs-client-text{
-  font-size:16px;font-weight:300;line-height:1.8;color:var(--white);
+  font-size:16px;font-weight:300;line-height:1.6;color:var(--white);
 }
 .cs-label{
   font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
@@ -161,7 +161,7 @@
 .cs-script-body{max-width:560px}
 .cs-script-direction{font-size:12px;font-style:italic;color:rgba(255,255,255,.5);margin:20px 0 6px}
 .cs-script-direction:first-of-type{margin-top:0}
-.cs-script-line{font-size:16px;font-weight:400;line-height:1.65;color:var(--white)}
+.cs-script-line{font-size:16px;font-weight:400;line-height:1.5;color:var(--white)}
 @media(max-width:480px){.cs-script{padding:32px 20px}}
 
 /* Gallery */
@@ -170,6 +170,11 @@
 .cs-gallery-item img,.cs-gallery-item video{width:100%;height:auto;display:block}
 .cs-gallery-video{cursor:pointer}
 .cs-gallery-label{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;pointer-events:none}
+
+.cs-gallery-layout{display:grid;gap:16px;margin-top:48px}
+.cs-gallery-row{display:grid;gap:16px}
+.cs-gallery-row[data-cols='2']{grid-template-columns:repeat(2,1fr)}
+.cs-gallery-row[data-cols='3']{grid-template-columns:repeat(3,1fr)}
 .cs-icon-row{display:flex;gap:24px;align-items:center;justify-content:center;padding:40px 0;margin-top:48px}
 .cs-icon-row img{width:calc(33% - 16px);max-width:180px;height:auto}
 .cs-icon-row--scroll{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:16px;-ms-overflow-style:none;scrollbar-width:none}
@@ -187,13 +192,13 @@
 .cs-editorial{margin-top:24px}
 .cs-editorial-b1{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:48px 0}
 .cs-editorial-b1-text{display:flex;flex-direction:column;gap:0}
-.cs-editorial-text{font-size:16px;line-height:1.8;color:var(--white)}
+.cs-editorial-text{font-size:16px;line-height:1.5;color:var(--white)}
 .cs-editorial-b1-imgs{display:grid;grid-template-columns:1fr 1fr;gap:3px}
 .cs-editorial-b1-img{width:100%;height:260px;object-fit:cover;display:block}
-.cs-editorial-b2{font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);padding:40px 0;max-width:680px}
+.cs-editorial-b2{font-size:16px;line-height:1.5;color:rgba(255,255,255,.7);padding:40px 0;max-width:680px}
 .cs-editorial-b3{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
 .cs-editorial-b3-img{width:100%;height:340px;object-fit:cover;display:block}
-.cs-editorial-b4{font-size:16px;line-height:1.8;color:var(--white);padding-top:40px;max-width:680px}
+.cs-editorial-b4{font-size:16px;line-height:1.5;color:var(--white);padding-top:40px;max-width:680px}
 @media(max-width:860px){
   .cs-editorial-b1{grid-template-columns:1fr;gap:24px;padding:32px 0}
   .cs-editorial-b3-img{height:220px}
@@ -250,14 +255,14 @@
 .cs-card-label-desktop{display:block}
 .cs-card-toggle{display:none}
 .cs-card-body{}
-.cs-info-card-text{font-size:14px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.75)}
+.cs-info-card-text{font-size:14px;font-weight:300;line-height:1.5;color:rgba(255,255,255,.75)}
 .cs-bullet-list{list-style:none;display:flex;flex-direction:column;gap:8px}
-.cs-bullet-list li{display:flex;align-items:flex-start;gap:8px;font-size:14px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.75)}
+.cs-bullet-list li{display:flex;align-items:flex-start;gap:8px;font-size:14px;font-weight:300;line-height:1.5;color:rgba(255,255,255,.75)}
 .cs-bullet{font-size:12px;flex-shrink:0;line-height:1.75}
 
 /* Closing copy */
 .cs-closing-copy{max-width:680px;margin:0 auto;padding:64px 0}
-.cs-closing-copy p{font-size:16px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:1.2em}
+.cs-closing-copy p{font-size:16px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.7);margin-bottom:1.2em}
 .cs-closing-copy p:last-child{margin-bottom:0}
 
 /* Back button */
@@ -272,6 +277,17 @@
 .cs-back::before{content:'←';transition:transform .2s}
 .cs-back:hover{opacity:1;gap:12px}
 .cs-back:hover::before{transform:translateX(-4px)}
+
+/* Gallery row consistent height */
+.cs-gallery-row .cs-gallery-item{aspect-ratio:4/3;margin-bottom:0}
+.cs-gallery-row .cs-gallery-item img,
+.cs-gallery-row .cs-gallery-item video{width:100%;height:100%;object-fit:cover}
+
+/* YouTube embed items */
+.cs-yt-iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:block}
+
+/* Per-project card overrides */
+[data-id="coco"] .project-img{object-position:center 40%}
 
 /* View states */
 .view-hidden{display:none!important}
@@ -386,7 +402,7 @@
   <div class="work-hero-inner">
     <p class="work-hero-eyebrow">Selected Work &nbsp;·&nbsp; Miami, FL</p>
     <h1 class="work-hero-title">What we've<br>been <em>building.</em></h1>
-    <p class="work-hero-body">A collection of brands, campaigns, and identities — built with people we believe in. Every project starts with a real conversation and ends with something we are proud to have made.</p>
+    <p class="work-hero-body">A collection of brands, campaigns, and identities. Built with people we believe in. Every project starts with a real conversation and ends with something we are proud to have made.</p>
   </div>
 </section>
 
@@ -495,6 +511,7 @@ function route() {
 }
 
 window.addEventListener('popstate', route);
+window.addEventListener('hashchange', route);
 
 // ── RENDER WORK GRID ──
 const GRID_INITIAL = 12;
@@ -507,6 +524,7 @@ function renderGrid() {
     card.type = 'button';
     card.className = 'project-card reveal';
     card.dataset.tag = p.tagLabel;
+    card.dataset.id = p.id;
     if (i >= GRID_INITIAL) card.classList.add('grid-hidden');
     card.setAttribute('role', 'listitem');
     card.setAttribute('aria-label', 'View ' + p.title + ' case study');
@@ -670,7 +688,16 @@ function renderCaseStudies() {
       iconRowHTML = `<div class="cs-icon-row${p.iconRowScroll ? ' cs-icon-row--scroll' : ''}">${icons}</div>`;
     }
     if (!p.images || !p.images.length) return iconRowHTML;
-    const items = p.images.map(src => {
+    const itemMarkup = src => {
+      const isYTVertical = src.startsWith('yt-v:');
+      const isYT = isYTVertical || src.startsWith('yt:');
+      if (isYT) {
+        const ytId = src.slice(src.indexOf(':') + 1);
+        const label = labels[ytId] || '';
+        const labelHTML = label ? `<span class="cs-gallery-label">${label}</span>` : '';
+        const ar = isYTVertical ? '9/16' : '16/9';
+        return `<div class="cs-gallery-item" style="aspect-ratio:${ar}"><iframe class="cs-yt-iframe" src="https://www.youtube-nocookie.com/embed/${ytId}?rel=0&modestbranding=1" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen frameborder="0"></iframe>${labelHTML}</div>`;
+      }
       const filename = src.split('/').pop();
       const label = labels[filename] || '';
       const isVideo = /\.(mp4|webm)$/i.test(src);
@@ -679,7 +706,17 @@ function renderCaseStudies() {
         : `<img src="${src}" alt="${p.title}" loading="lazy" class="cs-row-img">`;
       const labelHTML = label ? `<span class="cs-gallery-label">${label}</span>` : '';
       return `<div class="cs-gallery-item">${el}${labelHTML}</div>`;
-    }).join('');
+    };
+
+    if (p.galleryLayout && p.galleryLayout.length) {
+      const rows = p.galleryLayout.map(row => {
+        const items = row.map(itemMarkup).join('');
+        return `<div class="cs-gallery-row" data-cols="${row.length}">${items}</div>`;
+      }).join('');
+      return `${iconRowHTML}<div class="cs-gallery-layout">${rows}</div>`;
+    }
+
+    const items = p.images.map(itemMarkup).join('');
     const colStyle = p.galleryColumns ? ` style="column-count:${p.galleryColumns}"` : '';
     return `${iconRowHTML}<div class="cs-gallery"${colStyle}>${items}</div>`;
   }

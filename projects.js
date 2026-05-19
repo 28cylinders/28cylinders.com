@@ -273,7 +273,7 @@ const PROJECTS = [
     thumbnail: 'images/coco/thumb.png',
     hero: 'images/coco/thumb.png',
     images: [
-      'images/coco/brand-01.png',
+      'images/coco/brand-02.png',
       'images/coco/process-04.png',
       'images/coco/process-02.png',
       'images/coco/process-03.png',
@@ -296,7 +296,7 @@ const PROJECTS = [
       after: 'images/coco/brand-02.png',
       afterLabel: 'After'
     },
-    client: 'Coco Media Productions is a Miami-based video production company with ten years in the industry. The brand had not kept pace with the work.',
+    client: 'Coco Media Productions is a Miami and Chicago-based video production company with ten years in the industry. The brand had not kept pace with the work.',
     challenge: 'Conduct a full visual identity audit, identify what was worth keeping, and rebuild the system around it, without abandoning the equity the brand had already built.',
     description: 'Ten years in, Coco Media had outgrown their brand. The logo was outdated. The palette had no range. Typography was inconsistent across touchpoints. The brand did not match the work anymore.\n\nWe started with a full visual identity audit. Every element named, every gap diagnosed. Then we rebuilt the system around what was worth keeping.\n\nRetained the logo mark structure and hot pink as core brand equity. Replaced the grey dots with violet and turquoise, bringing the full palette to life. Tightened the typography system. Full brand guidelines delivered.\n\nTen year anniversary. Ready to grow into themselves. Exactly the kind of brief we love.',
     outcome: '',
@@ -321,14 +321,12 @@ const PROJECTS = [
     thumbnail: 'images/optimal-ads/thumbnail.png',
     hero: 'images/optimal-ads/thumbnail.png',
     images: [
-      'images/optimal-ads/samantha.mp4',
-      'images/optimal-ads/samantha-v2.mp4',
+      'yt-v:pzrKeXrmLeI',
       'images/optimal-ads/moodboard.png',
       'images/optimal-ads/landing-page.png'
     ],
     labels: {
-      'samantha.mp4': 'Campaign Creative: V1',
-      'samantha-v2.mp4': 'Campaign Creative: V2'
+      'pzrKeXrmLeI': 'Campaign Creative'
     },
     link: 'https://itsoptimal.com/pages/naked-trust-sale',
     linkLabel: 'View the campaign page',
@@ -486,12 +484,12 @@ const PROJECTS = [
     thumbnail: 'images/optimal-social/optimal social media thumbnail.png',
     hero: 'images/optimal-social/optimal social media thumbnail.png',
     images: [
-      'images/optimal-social/oklahoma-reel.mp4',
-      'images/optimal-social/ryan-why-people-switch.mp4'
+      'yt-v:isx1GFGtXtU',
+      'yt-v:avHr-N01k8g'
     ],
     labels: {
-      'oklahoma-reel.mp4': 'Oklahoma Reel',
-      'ryan-why-people-switch.mp4': 'Why People Switch'
+      'isx1GFGtXtU': 'Oklahoma Reel',
+      'avHr-N01k8g': 'Why People Switch'
     },
     client: 'Optimal makes electric tankless water heaters for the modern home.',
     challenge: 'Produce short-form video content that performs natively on social. Built for the feed, not adapted to it.',
@@ -556,12 +554,10 @@ const PROJECTS = [
     thumbnail: 'images/optimal-intro/thumb-still.png',
     hero: 'images/optimal-intro/thumb-still.png',
     images: [
-      'images/optimal-intro/intro-16-9.mp4',
-      'images/optimal-intro/intro-9-16.mp4'
+      'yt:XQZqRFUK7D8'
     ],
     labels: {
-      'intro-16-9.mp4': 'Horizontal: 16:9',
-      'intro-9-16.mp4': 'Vertical: 9:16'
+      'XQZqRFUK7D8': 'Brand Video'
     },
     client: 'Optimal makes electric tankless water heaters for the modern home. They are competing against Big Water. Winning that fight starts with trust, and trust starts with story.',
     challenge: 'Build a brand video from zero. No existing footage, no agency archive. Source personal imagery from the founding team\'s launch journey, reach out to the manufacturer for behind the scenes production footage, and assemble a film that communicates who they are, what they are building, and their why.',
