@@ -563,10 +563,12 @@ const PROJECTS = [
     thumbnail: 'images/optimal-intro/thumb-still.png',
     hero: 'images/optimal-intro/thumb-still.png',
     images: [
-      'yt:XQZqRFUK7D8'
+      'yt:XQZqRFUK7D8',
+      'yt-v:dUi3fKE--qY'
     ],
     labels: {
-      'XQZqRFUK7D8': 'Brand Video'
+      'XQZqRFUK7D8': 'Horizontal: 16:9',
+      'dUi3fKE--qY': 'Vertical: 9:16'
     },
     client: 'Optimal makes electric tankless water heaters for the modern home. They are competing against Big Water. Winning that fight starts with trust, and trust starts with story.',
     challenge: 'Build a brand video from zero. No existing footage, no agency archive. Source personal imagery from the founding team\'s launch journey, reach out to the manufacturer for behind the scenes production footage, and assemble a film that communicates who they are, what they are building, and their why.',
