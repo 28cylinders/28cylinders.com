@@ -378,8 +378,12 @@ const PROJECTS = [
     year: '2024',
     thumbnail: 'images/telemundo/thumb.png',
     hero: 'images/telemundo/thumb.png',
+    clickableThumb: {
+      src: 'images/telemundo/thumb.png',
+      url: 'https://www.instagram.com/reel/CrCUr5VM2Gn/',
+      label: 'Watch on Instagram'
+    },
     images: [
-      'images/telemundo/thumb.png',
       'images/telemundo/1.png',
       'images/telemundo/2.png'
     ],
@@ -514,6 +518,11 @@ const PROJECTS = [
     year: '2024',
     thumbnail: 'images/cottontail/shirt-back.png',
     hero: 'images/cottontail/shirt-back.png',
+    clickableThumb: {
+      src: 'images/cottontail/shirt-back.png',
+      url: 'https://www.tiktok.com/@unveiledcontentco/video/7625744073944468766',
+      label: 'Watch on TikTok'
+    },
     images: [
       'images/cottontail/magazine-cover.png',
       'images/cottontail/napkin-mockup.png',
