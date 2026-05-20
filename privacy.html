@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Privacy Policy — 28 Cylinders Creative Studio Miami</title>
+<meta name="description" content="Privacy policy for 28 Cylinders LLC.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.privacy-section{background:var(--black);color:var(--white);padding:100px 48px 120px;min-height:70vh}
+.privacy-inner{max-width:680px;margin:0 auto}
+.privacy-eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.35;margin-bottom:20px}
+.privacy-heading{font-size:clamp(32px,4vw,52px);font-weight:600;letter-spacing:-.02em;text-transform:uppercase;line-height:1.05;margin-bottom:12px}
+.privacy-updated{font-size:12px;font-weight:400;opacity:.35;margin-bottom:64px}
+.privacy-body p{font-size:16px;font-weight:300;line-height:1.8;opacity:.75;margin-bottom:24px}
+.privacy-body h2{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.45;margin:40px 0 12px}
+.privacy-body a{color:var(--white);opacity:1;text-decoration:underline}
+.privacy-body a:hover{opacity:.65}
+@media(max-width:600px){.privacy-section{padding:80px 24px 80px}}
+</style>
+</head>
+<body class="page-offset">
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html" aria-label="28 Cylinders Home">
+    <img src="images/brand/logo.png" alt="28 Cylinders">
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="index.html#about">Studio</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="mailto:hi@28cylinders.com" class="nav-cta">Let's Work</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="drawer" role="dialog" aria-label="Mobile menu">
+  <a href="index.html#services">Services</a>
+  <a href="work.html">Work</a>
+  <a href="index.html#about">Studio</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="mailto:hi@28cylinders.com" class="drawer-cta">Let's Work</a>
+</div>
+
+<!-- PRIVACY CONTENT -->
+<section class="privacy-section">
+  <div class="privacy-inner">
+    <p class="privacy-eyebrow">Legal</p>
+    <h1 class="privacy-heading">Privacy Policy</h1>
+    <p class="privacy-updated">Last updated: May 2026</p>
+
+    <div class="privacy-body">
+      <p>28 Cylinders LLC ("we", "us") operates 28cylinders.com. This page explains how we handle your information.</p>
+
+      <h2>Information we collect</h2>
+      <p>We may collect your name and email if you contact us through the site. We may also use basic analytics tools to understand how visitors use the site.</p>
+
+      <h2>How we use it</h2>
+      <p>Only to respond to inquiries and improve the site. We do not sell, share, or trade your information with third parties.</p>
+
+      <h2>Cookies</h2>
+      <p>Our site may use cookies for analytics purposes only.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Reach us at <a href="mailto:hi@28cylinders.com">hi@28cylinders.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html" aria-label="28 Cylinders">
+        <img src="images/brand/logo.png" alt="28 Cylinders">
+      </a>
+      <nav class="footer-nav" aria-label="Footer links">
+        <a href="index.html#services">Services</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#about">Studio</a>
+        <a href="mailto:hi@28cylinders.com">Email</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2023–2026 28 Cylinders LLC &middot; Miami, FL &middot; hi@28cylinders.com</p>
+      <div class="footer-bottom-right">
+        <a href="privacy.html" class="footer-privacy">Privacy Policy</a>
+        <p class="footer-love">Crafted with intention</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll behavior
+(function(){
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Hamburger / drawer
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('drawer');
+  hamburger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // Cursor dot
+  const dot = document.getElementById('cursor-dot');
+  document.addEventListener('mousemove', e => {
+    dot.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
+  });
+  document.addEventListener('mouseenter', () => dot.classList.add('active'));
+  document.addEventListener('mouseleave', () => dot.classList.remove('active'));
+})();
+</script>
+</body>
+</html>
